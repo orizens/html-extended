@@ -305,7 +305,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?:^\s+)?(&lt;)((?i:script))\b(?![^&gt;]*/&gt;)(?!.*type=["']text/(?:temp‌​late|html)['"])</string>
+			<string>(?:^\s+)?(&lt;)((?i:script))\b(?![^&gt;]*/&gt;)(?!.*type=["']text/(?:template|html)['"])</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -439,7 +439,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(&lt;/?)(((:*[a-z-])+|([a-z_])+)\b)</string>
+			<string>(&lt;/?)(((:*[a-z0-9-])+|([a-z_])+)\b)</string>
 			<key>captures</key>
 			<dict>
 				<key>1</key>
@@ -600,7 +600,7 @@
 
 		<dict>
 			<key>begin</key>
-			<string>(&lt;/?)((?i:[a-z-]+)\b)</string>
+			<string>(&lt;/?)((?i:[a-z0-9-]+)\b)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -937,7 +937,7 @@
 		<key>tag-generic-attribute</key>
 		<dict>
 			<key>match</key>
-			<string>\b([a-zA-Z\-:]+)</string>
+			<string>\b([a-zA-Z0-9\-:]+)</string>
 			<key>name</key>
 			<string>entity.other.attribute-name.html</string>
 		</dict>
